@@ -1,13 +1,21 @@
 # xAI API Reference
 
-Status: official-source verified 2026-09-09
+Status: official-source verified 2026-10-09
 
 ## Official sources
 
 - https://docs.x.ai/developers/grok-4-6
+- https://docs.x.ai/developers/grok-4-7
 - https://docs.x.ai/developers/models
 - https://docs.x.ai/developers/advanced-api-usage/prompt-caching
 - https://docs.x.ai/developers/advanced-api-usage/context-compaction
+
+## Grok 4.7 configuration
+
+- Model ID: `grok-4.7`, documented for the Responses API.
+- Reasoning levels: `low`, `medium`, `high` (default), `xhigh`. Context window: 500,000 tokens.
+- Responses API returns `reasoning.encrypted_content` even without an explicit `include` request; return reasoning items unchanged in subsequent multi-turn `input`.
+- For Responses, xAI recommends a stable `prompt_cache_key`; long tool-heavy runs may benefit from context compaction. These are API/runtime settings, not prompt text.
 
 ## Grok 4.6 configuration
 
@@ -29,4 +37,4 @@ Grok does not obtain realtime/current-event information merely because a prompt 
 
 ## Prompt boundary
 
-Search availability, reasoning level, cache keys and compaction are API/harness configuration. Grok 4.6 otherwise uses the model-neutral Core unless a future prompt-specific delta justifies a Profile.
+Search availability, reasoning level, cache keys and compaction are API/harness configuration. Grok 4.7 and Grok 4.6 use the model-neutral Core unless a verified prompt-specific delta justifies a Profile.

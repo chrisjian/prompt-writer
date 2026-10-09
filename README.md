@@ -22,9 +22,10 @@ Harness = 任务确实依赖时实时核验，不维护固定模型 Profile
 | GPT-6 Astra | `references/models/openai/gpt-6-astra.md` |
 | GPT-5.6 | `references/models/openai/gpt-5.6.md` |
 | Claude Fable 5.1 | `references/models/anthropic/claude-fable-5.1.md` |
+| Claude Opus 5.5 | `references/models/anthropic/claude-opus-5.5.md` |
 | Gemini 3.x | `references/models/google/gemini-3.x.md` |
 
-当前直接使用 Core：Claude Fable 5、Grok 4.6、DeepSeek V4、GLM 5.x、Doubao Seed 2.x。没有 Profile 不代表模型“不支持”，只表示当前没有值得加入默认 Prompt 上下文的 model-specific delta。
+当前直接使用 Core：GPT-6.1 Sol、Claude Fable 5、Grok 4.7 / 4.6、DeepSeek V4、GLM 5.x、Doubao Seed 2.x。没有 Profile 不代表模型“不支持”，只表示当前没有值得加入默认 Prompt 上下文的 model-specific delta。
 
 Profile 的准入与维护规则见 [AGENTS.md](AGENTS.md)。
 
