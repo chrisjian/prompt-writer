@@ -1,12 +1,13 @@
 # OpenAI API Reference
 
-Status: official-source verified 2026-09-09
+Status: official-source verified 2026-10-09
 
 ## Official sources
 
 - https://developers.openai.com/api/docs/models
 - https://developers.openai.com/api/docs/guides/latest-model
 - https://developers.openai.com/api/docs/models/gpt-6-astra
+- https://developers.openai.com/api/docs/models/gpt-6.1-sol
 - https://developers.openai.com/api/docs/models/gpt-5.6-sol
 - https://developers.openai.com/api/docs/models/gpt-5.6-luna
 
@@ -19,6 +20,13 @@ Status: official-source verified 2026-09-09
 - When migrating from `none` or `minimal`, OpenAI recommends starting with `low` and comparing results. Otherwise preserve the current effective effort unless evals justify a change.
 - Remove unsupported sampling/logprob parameters listed in current guidance rather than encoding them as prompt text.
 - Structured Outputs, prompt caching, compaction, persisted reasoning, computer use and related capabilities are API/harness features, not prompt switches.
+
+## GPT-6.1 Sol
+
+- Model ID: `gpt-6.1-sol`.
+- Current `reasoning.effort` options: `low`, `medium` (default), `high`, `xhigh`, `max`. `none` and `minimal` are not supported.
+- Context window: 1,050,000 tokens. Max output: 128,000 tokens.
+- Use the Responses API for tool calling. Chat Completions is supported only for requests without tool calling.
 
 ## GPT-5.6 family
 

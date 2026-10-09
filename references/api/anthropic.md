@@ -1,12 +1,22 @@
 # Anthropic API Reference
 
-Status: official-source verified 2026-09-09
+Status: official-source verified 2026-10-09
 
 ## Official sources
 
 - https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5
 - https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1
 - https://platform.claude.com/docs/en/models/fable-5-1/overview
+- https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5
+- https://platform.claude.com/docs/en/models/opus-5-5/overview
+- https://platform.claude.com/docs/en/models/opus-5-5/migration-guide
+
+## Claude Opus 5.5
+
+- Model ID: `claude-opus-5-5`. Adaptive thinking is always on; the default effort is `medium`. Tune effort using real workload results, not inherited Opus 5 settings.
+- Remove unsupported thinking-disabled and explicit thinking-budget requests on migration; do not use forced tool-choice modes rejected by Opus 5.5.
+- Preserved thinking blocks depend on the model and conversation history; keep required blocks intact rather than attempting to repair them with prompt text.
+- Progress notes between tool calls are returned as thinking blocks. The default display omits their text; clients that must show updates need the documented `thinking.display` and rendering flow.
 
 ## Effort
 

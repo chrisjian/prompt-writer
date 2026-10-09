@@ -1,7 +1,7 @@
 ---
 name: prompt-writer
 disable-model-invocation: true
-description: 为 GPT-6 Astra、GPT-5.6、Claude Fable 5/5.1、Gemini 3.x、Grok 4.6、DeepSeek V4、GLM 5.x、Doubao Seed 2.x 等模型编写、审计、压缩和迁移高质量提示词，优先日常工作与 coding-agent 场景。默认使用跨模型 Core；只有存在会实质改变自然语言 Prompt 写法的 Model Profile 时才加载该 Profile。API/SDK、具体参数和协议仅在程序化接入任务中按需加载。仅在用户显式调用本技能时使用。
+description: 为 GPT-6 Astra / GPT-6.1 Sol / GPT-5.6、Claude Opus 5.5 / Fable 5/5.1、Gemini 3.x、Grok 4.7 / 4.6、DeepSeek V4、GLM 5.x、Doubao Seed 2.x 等模型编写、审计、压缩和迁移高质量提示词，优先日常工作与 coding-agent 场景。默认使用跨模型 Core；只有存在会实质改变自然语言 Prompt 写法的 Model Profile 时才加载该 Profile。API/SDK、具体参数和协议仅在程序化接入任务中按需加载。仅在用户显式调用本技能时使用。
 ---
 
 # 多模型提示词工程
@@ -23,9 +23,10 @@ description: 为 GPT-6 Astra、GPT-5.6、Claude Fable 5/5.1、Gemini 3.x、Grok 
 - GPT-6 Astra → `references/models/openai/gpt-6-astra.md`
 - GPT-5.6 → `references/models/openai/gpt-5.6.md`
 - Claude Fable 5.1 → `references/models/anthropic/claude-fable-5.1.md`
+- Claude Opus 5.5 → `references/models/anthropic/claude-opus-5.5.md`
 - Gemini 3.x → `references/models/google/gemini-3.x.md`
 
-Claude Fable 5、Grok 4.6、DeepSeek V4、GLM 5.x、Doubao Seed 2.x 当前直接使用 Core，不加载占位 Profile。未列出的模型也先使用 Core；不要从产品定位、API 能力或其他模型的行为推断 Prompt 特例。
+GPT-6.1 Sol、Claude Fable 5、Grok 4.7 / 4.6、DeepSeek V4、GLM 5.x、Doubao Seed 2.x 当前直接使用 Core，不加载占位 Profile。未列出的模型也先使用 Core；不要从产品定位、API 能力或其他模型的行为推断 Prompt 特例。
 
 ### API
 
